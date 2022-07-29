@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>새미네부엌/로그인</title>
+
+    <script src="https://kit.fontawesome.com/9575841a1c.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!--경고창 디자인-->
+
+    <link href="css/login.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+    <!--<script src="js/popup.js"></script>-->
+
+    <script>
+        /*familysite*/
+        function copyrtChgUrl(url) {
+            if (url) {
+                window.open(url);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <nav>
+                <a href="index.html" class="logo"><img src="images/logo1.PNG" alt="로고"></a>
+
+                <ul class="navi" id="navi">
+                    <li><a href="#">요리상담소</a><i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#">요리상담소</a></li>
+                            <li><a href="#">요리상담소</a></li>
+                            <li><a href="#">요리상담소</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요리법 연구소</a><i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#">요리법 연구소</a></li>
+                            <li><a href="#">요리법 연구소</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">요리해요</a><i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#">요리해요</a></li>
+                            <li><a href="#">요리해요</a></li>
+                            <li><a href="#">요리해요</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">맛있는 추억</a><i class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#">맛있는 추억</a></li>
+                        </ul>
+                    </li>
+                    <li class="menupng"><a href="#"><img src="images/menu2.PNG" alt="wow">이벤트</a><i
+                            class="fa-solid fa-caret-down"></i>
+                        <ul class="submenu">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">이벤트</a></li>
+                        </ul>
+                    </li>
+
+                    <div class="searchmom">
+                        <div class="search-mode">
+                            <input type="search" placeholder="&#xf002;">
+
+                            <div class="icon">
+                                <div class="plus-option">
+                                    <i class="fas fa-keyboard"></i>
+                                    <i class="fas fa-microphone"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </ul>
+
+                <div class="topbtn">
+                    <!--<button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>-->
+                    <button type="button" onclick="location.href = 'login.html' "><i
+                            class="fa-solid fa-user"></i></button>
+                </div>
+            </nav>
+
+            <!--더보기아이콘-->
+            <button type="button" id="ham"><i class="fa-solid fa-align-right"></i></button>
+            <button type="button" id="close"><i class="fa-solid fa-xmark"></i></button>
+        </header>
+
+        <main>
+            <section class="login-form">
+                <h1>로그인</h1>
+                <form>
+                    <input type="text" name="email" class="text-field" placeholder="아이디 또는 이메일주소">
+                    <input type="password" name="password" class="text-field" placeholder="비밀번호">
+                    <input type="submit" value="로그인" class="submit-btn">
+                </form>
+
+                <div class="links">
+                    <a href="#">비밀번호를 잊어버리셨나요?</a>
+                </div>
+
+                <div class="linkss">
+                    <a href="#">회원가입</a>|
+                    <a href="#">아이디/비밀번호 찾기</a>
+                </div>
+
+                <div class="sns">
+                    <div class="hrs">
+                        <hr>
+                        <p>소셜미디어 계정으로 로그인</p>
+                        <hr>
+                    </div>
+
+                    <form>
+                        <button type="button" onclick="location.href='#'" id="kakao"><i class="fa-solid fa-comment"> 카카오
+                                계정으로 로그인</i></button>
+                        <button type="button" onclick="location.href='#'" id="naver"><i class="fa-solid fa-n"> 네이버 계정으로
+                                로그인</i></button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <aside id="e">
+            <ul>
+                <li><a href="#">맛추억 문의</a> |</li>
+                <li><a href="#">이용약관</a> |</li>
+                <li><a href="#">개인정보처리방침</a> |</li>
+                <li><a href="#">1:1문의</a></li>
+            </ul>
+
+            <select class="familysite" onchange="copyrtChgUrl(this.value)">
+                <option value="0">Familysite</option>
+                <option value="https://www.sempio.com">샘표식품</option>
+                <option value="http://www.tasiakitchen.co.kr/default/">티아시아 키친</option>
+                <option value="https://sempio.recruiter.co.kr/appsite/company/index">샘표채용</option>
+            </select>
+
+        </aside>
+
+        <footer>
+            <p>
+                샘표식품(주) | 주소 : 서울특별시 중구 충무로2
+                (우편번호 : 04557) | 맛추억 운영 사무국 : 02-3393-5645 ~ 7 (평일 : 9:00 ~ 17:00 / 점심시간 12:30 ~ 13:30)
+                Copyright ⓒ 샘표식품, All Rights Reserved.
+            </p>
+        </footer>
+    </div>
+
+    <a href="#" id="topbtn"><img src="images/logo2.PNG"></a>
+</body>
+
+</html>
